@@ -12,6 +12,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/apns', {
+        templateUrl: 'app/apns/apns.html',
+        controller: 'ApnsController',
+        controllerAs: 'apns'
+      })
       .otherwise({
         redirectTo: '/'
       });

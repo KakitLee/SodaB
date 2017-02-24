@@ -6,14 +6,13 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($log, $timeout, webDevTec, toastr, API) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
-    vm.creationDate = 1487841982342;
     vm.showToastr = showToastr;
-
+    vm.accountURL = API.CONFIGURATION;
     activate();
 
     function activate() {

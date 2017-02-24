@@ -6,7 +6,7 @@
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function acmeNavbar($log) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
