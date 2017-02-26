@@ -5,9 +5,15 @@
     .module('sodaB')
     .controller('ApplicationController', ApplicationController);
 
-  /** @ngInject */
-  function ApplicationController($scope) {
+  // function ApplicationController($scope) {
+  //
+  //   $scope.creationDate = 1487841982342;
+  // }
 
-    $scope.creationDate = 1487841982342;
+  /** @ngInject */
+  function ApplicationController(){
+    var vm = this;
+
+    vm.creationDate = 1487841982342;
   }
 })();

@@ -1,5 +1,97 @@
-<div class="container">
+<div class="uk-grid">
+  <div class="uk-width-1-1 masthead">
+    <div class="container">
+      <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">
+        <h1>SodaB</h1>
+        <img src="assets/images/notificationSample.png">
+        <p class="description"> Welcome to the world first online FREE APNS </p>
+        <a class="btn btn-lg">Get Start</a>
+        <p class="version"> Version: {{apns.version}} - {{apns.date}} - {{apns.author}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <form class="uk-form apns-body">
+      <label class="title">Prepare stage</label>
+      <div class="uk-form-row">
+        <div class="bs-example">
+          <label class="control-label">Select Certificate File</label>
+          <div class="file-input file-input-new">
+            <div class="kv-upload-progress hide">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width:0%;">
+                  0%
+                </div>
+              </div>
+            </div>
+            <div class="input-group file-caption-main">
+              <div class="form-control file-caption kv-fileinput-caption" tabindex="500">
+                <div class="file-caption-name"></div>
+              </div>
+              <div class="input-group-btn">
+                <button class="btn btn-default fileinput-remove fileinput-remove-button" tabindex="500" title="Clear selected files" type="button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Remove</span></button> <button class="btn btn-default hide fileinput-cancel fileinput-cancel-button"
+                    tabindex="500" title="Abort ongoing upload" type="button"><i class="glyphicon glyphicon-ban-circle"></i> <span class="hidden-xs">Cancel</span></button> <button class="btn btn-default fileinput-upload fileinput-upload-button" tabindex="500"
+                    title="Upload selected files" type="submit"><i class="glyphicon glyphicon-upload"></i> <span class="hidden-xs">Upload</span></button>
+                <div class="btn btn-primary btn-file" tabindex="500">
+                  <i class="uk-icon-cloud-upload"></i>&nbsp; <span class="hidden-xs">Browse …</span><input class="file" data-show-preview="false" id="input-1a" type="file">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-form-row">
+        <div class="bs-example">
+          <label class="control-label">Select Key File</label>
+          <div class="file-input file-input-new">
+            <div class="kv-upload-progress hide">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width:0%;">
+                  0%
+                </div>
+              </div>
+            </div>
+            <div class="input-group file-caption-main">
+              <div class="form-control file-caption kv-fileinput-caption" tabindex="500">
+                <div class="file-caption-name"></div>
+              </div>
+              <div class="input-group-btn">
+                <button class="btn btn-default fileinput-remove fileinput-remove-button" tabindex="500" title="Clear selected files" type="button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Remove</span></button> <button class="btn btn-default hide fileinput-cancel fileinput-cancel-button"
+                    tabindex="500" title="Abort ongoing upload" type="button"><i class="glyphicon glyphicon-ban-circle"></i> <span class="hidden-xs">Cancel</span></button> <button class="btn btn-default fileinput-upload fileinput-upload-button" tabindex="500"
+                    title="Upload selected files" type="submit"><i class="glyphicon glyphicon-upload"></i> <span class="hidden-xs">Upload</span></button>
+                <div class="btn btn-primary btn-file" tabindex="500">
+                  <i class="uk-icon-cloud-upload"></i>&nbsp; <span class="hidden-xs">Browse …</span><input class="file" data-show-preview="false" id="input-1a" type="file">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-form-row">
+        <notice> We promise that your key and certificate will never be cached on our server </notice>
+      </div>
 
-  <p> This is a page for apns </p>
+      <label class="title">Notification is on fire</label>
+      <div class="row">
+          <div class="col-md-6">
+            <label class="control-label">Device token</label>
+            <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+          </div>
+          <div class="col-md-6">
+            <label class="control-label">Fire Date</label>
+            <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+          </div>
+          <div class="col-md-12">
+            <label class="control-label">Message</label>
+            <div class="input-group">
+              <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+              <span class="input-group-btn">
+    				        <button class="btn btn-primary"><span class="uk-icon-send" aria-hidden="true"></span> Send</button>
+              </span>
+            </div>
+          </div>
+      </div>
+    </form>
+  </div>
 
 </div>

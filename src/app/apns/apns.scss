@@ -1,0 +1,77 @@
+.masthead  {
+    height: 700px;
+    background-color: rgb(23, 8, 53);
+    -webkit-animation: bgchange ease 10s infinite;
+    animation: bgchange ease 10s infinite;
+}
+
+@-webkit-keyframes bgchange {
+    0% { background-color:rgb(23, 8, 53); }
+    50% { background-color:rgb(37, 38, 56); }
+    100% { background-color:rgb(23, 8, 53); }
+
+}
+@keyframes bgchange {
+    0% { background-color:rgb(23, 8, 53); }
+    50% { background-color:rgb(37, 38, 56); }
+    100% { background-color:rgb(23, 8, 53); }
+}
+
+.masthead h1 {
+  color: white;
+  margin: 30px 0px 10px 0px;
+  font-size: 3em;
+}
+
+.masthead p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.masthead .description {
+  color: white;
+  font-size: 2em;
+}
+
+.masthead .version {
+  color: #cdbfe3;
+  font-size: 1em;
+}
+
+.masthead img {
+  margin: -20px 0px 0px 0px;
+}
+
+.masthead a {
+    color: #ffe484;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffe484;
+}
+.masthead a:hover {
+    background-color: #ffe484;
+    color: black;
+}
+
+.apns-body {
+  margin-left: 12px;
+  margin-right: 12px;
+  min-height: 700px;
+}
+
+.apns-body .title {
+  font-size: 2em;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
+// .apns-body label {
+//   font-size: 1em;
+//   margin-right: 30px;
+//   width: 100px;
+// }
+
+.apns-body notice  {
+  color: gray;
+  font-style: italic;
+}
