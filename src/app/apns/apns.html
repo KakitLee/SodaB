@@ -12,7 +12,7 @@
   </div>
   <div class="container">
     <form class="uk-form apns-body">
-      <label class="title">Prepare stage</label>
+      <label class="title">Preparation stage</label>
       <div class="uk-form-row">
         <div class="bs-example">
           <label class="control-label">Select Certificate File</label>
@@ -71,25 +71,32 @@
         <notice> We promise that your key and certificate will never be cached on our server </notice>
       </div>
 
-      <label class="title">Notification is on fire</label>
+      <label class="title">Notification is on fire <span><img src="assets/images/fire.png"></span></label>
       <div class="row">
-          <div class="col-md-6">
-            <label class="control-label">Device token</label>
+        <div class="col-md-6">
+          <label class="control-label">Device token</label>
+          <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+        </div>
+        <div class="col-md-4">
+          <label class="control-label">Fire Date</label>
+          <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+        </div>
+        <div class="col-md-2">
+          <label class="control-label">Development/Production</label>
+          <select class="form-control" style="height: 34px;">
+            <option>Development</option>
+            <option>Production</option>
+        </select>
+        </div>
+        <div class="col-md-12">
+          <label class="control-label">Message</label>
+          <div class="input-group">
             <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+            <span class="input-group-btn">
+    				  <button class="btn btn-primary"><span class="uk-icon-send" aria-hidden="true"></span> Send</button>
+            </span>
           </div>
-          <div class="col-md-6">
-            <label class="control-label">Fire Date</label>
-            <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
-          </div>
-          <div class="col-md-12">
-            <label class="control-label">Message</label>
-            <div class="input-group">
-              <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
-              <span class="input-group-btn">
-    				        <button class="btn btn-primary"><span class="uk-icon-send" aria-hidden="true"></span> Send</button>
-              </span>
-            </div>
-          </div>
+        </div>
       </div>
     </form>
   </div>
