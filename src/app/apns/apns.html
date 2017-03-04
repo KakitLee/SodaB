@@ -16,13 +16,13 @@
       <div class="uk-form-row">
         <div class="bs-example">
           <label class="control-label">Select Certificate File</label>
-          <input id="input-certificate" type="file" class="file" data-show-preview="false">
+          <input id="input-certificate" name="certificate" type="file" class="file" data-show-preview="false" data-show-upload="false">
         </div>
       </div>
       <div class="uk-form-row">
         <div class="bs-example">
           <label class="control-label">Select Key File</label>
-          <input id="input-key" type="file" class="file" data-show-preview="false">
+          <input id="input-key" name="key" type="file" class="file" data-show-preview="false" data-show-upload="false">
         </div>
       </div>
       <div class="uk-form-row">
@@ -33,25 +33,25 @@
       <div class="row">
         <div class="col-md-6">
           <label class="control-label">Device token</label>
-          <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+          <input type="text" ng-model="apns.data.deviceToken" class="form-control" style="height: 34px; border-radius: 4px;">
         </div>
         <div class="col-md-4">
           <label class="control-label">Fire Date</label>
-          <input type="text" class="form-control" data-uk-datepicker="{format:'DD/MMM/YYYY'}"  style="height: 34px; border-radius: 4px;">
+          <input type="text" ng-model="apns.data.fireDate" class="form-control" data-uk-datepicker="{format:'DD/MMM/YYYY'}"  style="height: 34px; border-radius: 4px;">
         </div>
         <div class="col-md-2">
           <label class="control-label">Development/Production</label>
-          <select class="form-control" style="height: 34px;">
-            <option>Development</option>
-            <option>Production</option>
+          <select ng-model="apns.data.isProduction" class="form-control" style="height: 34px;">
+            <option value="false">Development</option>
+            <option value="true">Production</option>
         </select>
         </div>
         <div class="col-md-12">
           <label class="control-label">Message</label>
           <div class="input-group">
-            <input type="text" class="form-control" style="height: 34px; border-radius: 4px;">
+            <input type="text" ng-model="apns.data.message" class="form-control" style="height: 34px; border-radius: 4px;">
             <span class="input-group-btn">
-    				  <button class="btn btn-primary"><span class="uk-icon-send" aria-hidden="true"></span> Send</button>
+    				  <button class="btn btn-primary" ng-click="apns.submit()"><span class="uk-icon-send" aria-hidden="true"></span> Send</button>
             </span>
           </div>
         </div>

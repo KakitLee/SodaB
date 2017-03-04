@@ -21,6 +21,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
 
     //Bower: inject only look at the bower.js main in dependencies but UIkit did no put date picker in
     path.join(conf.paths.vendor, '/uikit/css/components/datepicker.min.css'),
+    path.join(conf.paths.vendor, '/uikit/css/components/notify.min.css'),
 
     path.join('!' + conf.paths.tmp, '/serve/app/vendor.css')
   ], { read: false });
@@ -31,6 +32,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
 
     //Bower: inject only look at the bower.js main in dependencies but UIkit did no put date picker in
     path.join(conf.paths.vendor, '/uikit/js/components/datepicker.min.js'),
+    path.join(conf.paths.vendor, '/uikit/js/components/notify.min.js'),
 
     path.join('!' + conf.paths.src, '/app/**/*.spec.js'),
     path.join('!' + conf.paths.src, '/app/**/*.mock.js')
