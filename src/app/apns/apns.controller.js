@@ -16,7 +16,6 @@
     vm.data = {
       isProduction: "false",
       message: "This is a test message from the world first FREE APNS",
-      fireDate: moment(new Date()).format('DD/MMM/YYYY')
     };
 
     vm.init = function () {
@@ -33,7 +32,7 @@
       vm.certificateInput.on('filepreupload', checkExtension);
       vm.certificateInput.on('filecustomerror', function(){
         vm.certificateInput.fileinput('unlock').fileinput('enable');
-        UIkit.notify('Invalid file format, please make sure the extension is pem.', {pos:'bottom-right', status:'danger'})
+        UIkit.notify("<i class='uk-icon-exclamation'></i> Invalid file format, please make sure the extension is pem.", {pos:'bottom-right', status:'danger'})
       });
       vm.certificateInput.on('fileuploaded', fileuploaded);
 
@@ -41,17 +40,24 @@
       vm.keyInput.on('filepreupload', checkExtension);
       vm.keyInput.on('filecustomerror', function(){
         vm.keyInput.fileinput('unlock').fileinput('enable');
-        UIkit.notify('Invalid file format, please make sure the extension is pem.', {pos:'bottom-right', status:'danger'})
+        UIkit.notify("<i class='uk-icon-exclamation'></i> Invalid file format, please make sure the extension is pem.", {pos:'bottom-right', status:'danger'})
       });
       vm.keyInput.on('fileuploaded', fileuploaded);
     };
 
     vm.submit = function() {
       console.log('request = ', vm.data);
+      if(!validation()){
+        UIkit.notify('Imcomplete form', {pos:'bottom-right', status:'danger'});
+        return;
+      }
+
       $http.post(CONT.SERVER + CONT.NOTIFICATION_SEND, vm.data)
                   .success(function (data, status, headers) {
+                     UIkit.notify("<i class='uk-icon-check'></i> " + data.message, {pos:'bottom-right', status:'success'});
                   })
-                  .error(function (data, status, header, config) {
+                  .error(function (data) {
+                       UIkit.notify("<i class='uk-icon-close'></i> " + data.message, {pos:'bottom-right', status:'danger'});
                   });
     }
 
@@ -90,6 +96,18 @@
       }else{
         vm.data.keyName = filename;
       }
+    }
+
+    function validation(){
+      if(vm.data){
+        if(vm.data.isProduction !== undefined &&
+          vm.data.deviceToken !== undefined &&
+          vm.data.certificateName !== undefined &&
+          vm.data.keyName !== undefined
+        )
+        return true;
+      }
+      return false;
     }
 
     vm.init();
